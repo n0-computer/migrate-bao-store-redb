@@ -1,0 +1,23 @@
+[package]
+name = "migrate-bao-store-redb"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.81"
+clap = { version = "4.5.3", features = ["derive"] }
+
+redb-15 = { package = "redb", version = "1.5.0" }
+iroh-base-redb-15 =  { package = "iroh-base", git = "https://github.com/n0-computer/iroh.git", rev = "8dcb1969ddca148757bc5c64861e29f107d6d0d9", features = ["redb"] }
+iroh-bytes-redb-15 = { package = "iroh-bytes", git = "https://github.com/n0-computer/iroh.git", rev = "8dcb1969ddca148757bc5c64861e29f107d6d0d9" }
+
+redb = "2.0.0"
+iroh-base = { package = "iroh-base", git = "https://github.com/n0-computer/iroh.git", branch = "deps/redb-v2", features = ["redb"] }
+iroh-bytes = { package = "iroh-bytes", git = "https://github.com/n0-computer/iroh.git", branch = "deps/redb-v2" }
+serde = "1.0.197"
+postcard = "1.0.8"
+smallvec = "1.13.2"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
